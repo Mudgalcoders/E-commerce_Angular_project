@@ -1,0 +1,52 @@
+<div class="home-container">
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <h1>E-commerce</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+        <li><a (click)="logOut()" class="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="features">
+      <div class="container">
+        <h1>Warehouse Management</h1>
+        <button class="add-warehouse-btn" (click)="openAddWarehouseForm(addwarehouse)">
+          <!-- <app-add-warehouse-management *ngIf="isAddWarehouseVisible" (close)="closeAddWarehouseForm(addwarehouse)"></app-add-warehouse-management> -->
+          Add New Warehouse
+        </button>
+        <app-warehouse-management></app-warehouse-management>
+      </div>
+    </section>
+  </main>
+  
+  <ng-template #addwarehouse> 
+    <!-- <div class="overlay"  (click)="closeDialog(dialogRef)"></div> -->
+    <div class="popup-container">
+      <app-add-warehouse-management></app-add-warehouse-management>
+      <!-- <div class="popup-actions">
+        <button (click)="submitDialog(dialogRef)">Submit</button>
+        <button (click)="closeDialog(dialogRef)">Close</button>
+      </div> -->
+    </div>
+  </ng-template>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 E-commerce Website. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  
+
+</div>
+

@@ -1,0 +1,69 @@
+<!-- <p>add-warehouse-management works!</p> -->
+
+<!-- <div class="popup-overlay" *ngIf="isVisible">
+    <div class="popup-content">
+      <button (click)="closePopup()" class="close-btn">X</button>
+      <h2>Add New Warehouse</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div>
+          <label for="productName">Product Name:</label>
+          <input type="text" id="productName"  name="productName" required />
+        </div>
+        <div>
+          <label for="productDescription">Product Description:</label>
+          <input type="text" id="productDescription"  name="productDescription" />
+        </div>
+        <div>
+          <label for="productImage">Product Image URL:</label>
+          <input type="text" id="productImage" name="productImage" />
+        </div>
+        <div>
+          <button type="submit">Add Warehouse</button>
+        </div>
+      </form>
+    </div>
+  </div> -->
+
+  <div>
+    <div class="popup-content">
+      <button (click)="closePopup()" class="close-btn">X</button>
+      <h2>Add New Warehouse</h2>
+      <form [formGroup]="warehouseForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="productName">Product Name:</label>
+          <input
+            type="text"
+            id="productName"
+            formControlName="productName"
+            required
+          />
+          <div *ngIf="warehouseForm.get('productName')?.invalid && warehouseForm.get('productName')?.touched">
+            <small>Product name is required.</small>
+          </div>
+        </div>
+        <div>
+          <label for="productDescription">Product Description:</label>
+          <input
+            type="text"
+            id="productDescription"
+            formControlName="productDescription"
+          />
+        </div>
+        <div>
+          <label for="productImage">Product Image URL:</label>
+          <input
+            type="text"
+            id="productImage"
+            formControlName="productImage"
+          />
+        </div>
+        <div>
+          <button type="submit" [disabled]="warehouseForm.invalid">
+            Add Warehouse
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  

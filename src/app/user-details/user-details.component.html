@@ -1,0 +1,9 @@
+<form [formGroup] ="formdetails" (ngSubmit)="onSubmit()">
+
+    <input type="text" placeholder="Enter the name" formControlName="Name"/>
+    <input type="text" placeholder="Enter the Designation" formControlName="Designation"/>
+    <input type="number" placeholder="Enter the mobile no" formControlName="Mobile"/>
+  
+    <button type="submit">Submit</button>
+
+  </form>

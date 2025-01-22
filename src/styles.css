@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+.custom-dialog-container {
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  
+}
+  
+.custom-dialog-container .mat-mdc-dialog-container {
+   position: absolute;
+  }
+  
+  .mat-dialog-container {
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    max-width: 600px; 
+    width: 90%;
+  }
+  
+  .popup-container {
+    text-align: center;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Shift the popup back to true center */
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visuals */
+    padding: 20px;
+    z-index: 1000; /* Ensure popup is on top */
+    transform: translate(127%, 86%) !important;
+  }
+  
+  
+  .popup-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* @media (max-width: 768px) {
+    .mat-dialog-container {
+      width: 95%;
+      padding: 8px;
+    }
+  } */
